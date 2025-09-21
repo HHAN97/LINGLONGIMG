@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>LINGLONG 加拿大现货 | 产品展示</title>
+  <style>
+    body {font-family: Arial, sans-serif; margin: 0; background: #f7f7f7;}
+    header {background: #222; color: white; padding: 16px; text-align: center;}
+    .container {max-width: 1100px; margin: 0 auto; padding: 20px;}
+    h1 {font-size: 28px; margin-bottom: 20px;}
+    .grid {display: grid; grid-template-columns: repeat(auto-fill,minmax(250px,1fr)); gap: 16px;}
+    .card {background: white; border-radius: 10px; padding: 16px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); display:flex; flex-direction:column;}
+    .card img {width: 100%; height: auto; max-height: 250px;object-fit: contain; border-radius: 8px; margin-bottom: 12px;}
+    .title {font-weight: bold; font-size: 16px; margin-bottom: 8px;}
+    .brand {color: #555; font-size: 14px; margin-bottom: 6px;}
+    .price {margin-top: auto; font-size: 15px;}
+    .price del {color: #999; margin-left: 6px;}
+    footer {background:#222;color:#eee;text-align:center;padding:20px;margin-top:40px}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>LINGLONG 加拿大现货 · 产品展示</h1>
+  </header>
+  <main class="container">
+    <div id="grid" class="grid"></div>
+  </main>
+  <footer>
+    <p>© <span id="year"></span> LINGLONG 加拿大现货</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // 来自 Excel 的产品数据（添加了图片占位符）
+    const products = [
+      {brand:"ANUA", name:"ANUA Birch Moisture Boosting Toner 250ml", price:22, old:24, img:"https://hhan97.github.io/LINGLONGIMG/Picture1.jpg"},
+      {brand:"ANUA", name:"Anua Niacinamide10% + Txa 4% Dark Spot Removing Serum", price:29, old:36, img:"https://hhan97.github.io/LINGLONGIMG/Picture4.png"},
+      {brand:"ANUA", name:"Anua Heart leaf Deep Makeup Removal 鱼腥草深层卸妆液", price:23, old:32, img:"https://hhan97.github.io/LINGLONGIMG/main/Picture4.png"},
+      {brand:"ANUA", name:"ANUA Rice Bran Toner 250ml 大米爽肤水", price:25, old:26, img:"https://via.placeholder.com/300x180?text=ANUA"},
+      {brand:"ARENCIA", name:"ARENCIA Blue Hyssop Cleansing Cream 120g", price:23, old:25, img:"https://via.placeholder.com/300x180?text=ARENCIA"},
+      {brand:"ARENCIA", name:"ARENCIA Ceramide Plus Cream 50ml", price:29, old:35, img:"https://via.placeholder.com/300x180?text=ARENCIA"},
+      {brand:"ARENCIA", name:"ARENCIA Multi Hyaluronic Acid Ampoule 50ml", price:28, old:34, img:"https://via.placeholder.com/300x180?text=ARENCIA"},
+      {brand:"BEIGIC", name:"BEIGIC Regenerating Oil 37ml", price:42, old:49, img:"https://via.placeholder.com/300x180?text=BEIGIC"},
+      {brand:"BEIGIC", name:"BEIGIC Comforting Cream 50ml", price:37, old:45, img:"https://via.placeholder.com/300x180?text=BEIGIC"},
+      {brand:"DONGINBI", name:"DONGINBI 1899 Single Essence 120ml", price:72, old:88, img:"https://via.placeholder.com/300x180?text=DONGINBI"},
+      {brand:"DONGINBI", name:"DONGINBI Red Ginseng Moisture & Firming Cream", price:95, old:118, img:"https://via.placeholder.com/300x180?text=DONGINBI"},
+      {brand:"MIXSOON", name:"MIXSOON Bean Essence 50ml", price:28, old:34, img:"https://via.placeholder.com/300x180?text=MIXSOON"},
+      {brand:"MIXSOON", name:"MIXSOON Galactomyces Ferment Essence 100ml", price:27, old:32, img:"https://via.placeholder.com/300x180?text=MIXSOON"},
+      {brand:"ROM&ND", name:"ROM&ND Juicy Lasting Tint", price:9, old:12, img:"https://via.placeholder.com/300x180?text=ROM%26ND"},
+      {brand:"ROM&ND", name:"ROM&ND Better Than Palette", price:18, old:23, img:"https://via.placeholder.com/300x180?text=ROM%26ND"},
+      {brand:"SOME BY MI", name:"SOME BY MI AHA BHA PHA 30 Days Miracle Toner 150ml", price:22, old:28, img:"https://via.placeholder.com/300x180?text=SOME+BY+MI"},
+      {brand:"SOME BY MI", name:"SOME BY MI Yuja Niacin Brightening Sleeping Mask", price:21, old:26, img:"https://via.placeholder.com/300x180?text=SOME+BY+MI"},
+      {brand:"TOCOBO", name:"TOCOBO Bio Watery Sun Cream SPF50+ PA++++", price:15, old:20, img:"https://via.placeholder.com/300x180?text=TOCOBO"},
+      {brand:"TOCOBO", name:"TOCOBO Collagen Brightening Eye Gel Cream 30ml", price:18, old:24, img:"https://via.placeholder.com/300x180?text=TOCOBO"},
+      {brand:"VT", name:"VT Cica Mild Foam Cleanser", price:16, old:21, img:"https://via.placeholder.com/300x180?text=VT"},
+    ];
+
+    const grid = document.getElementById('grid');
+    products.forEach(p => {
+      const el = document.createElement('div');
+      el.className = 'card';
+      el.innerHTML = `<img src='${p.img}' alt='${p.name}' />
+                      <div class='brand'>${p.brand||''}</div>
+                      <div class='title'>${p.name}</div>
+                      <div class='price'>￥${p.price} <del>￥${p.old}</del></div>`;
+      grid.appendChild(el);
+    });
+  </script>
+</body>
+</html>
