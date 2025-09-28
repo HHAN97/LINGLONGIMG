@@ -61,13 +61,37 @@ document.getElementById('year').textContent = new Date().getFullYear();
       {brand:"SKIN1004", name:"MADAGSCAR CENTELLA TONE BRIGHTENING BOOSTING TONER 210 ml 马达加斯加积雪草焕亮肌底精华水 210ml", price:25, old:30, img:"LINGLONG/MADAGSCAR CENTELLA TONE BRIGHTENING BOOSTING TONER 210 ml.webp"},
     ];
 
-    const grid = document.getElementById('grid');
-    products.forEach(p => {
-      const el = document.createElement('div');
-      el.className = 'card';
-      el.innerHTML = `<img src='${p.img}' alt='${p.name}' />
-                      <div class='brand'>${p.brand||''}</div>
-                      <div class='title'>${p.name}</div>
-                      <div class='price'>￥${p.price} <del>￥${p.old}</del></div>`;
-      grid.appendChild(el);
-    });
+function renderProducts(filterBrand = "all"){
+  const grid = document.getElementById('grid');
+  grid.innerHTML = "";
+
+  products
+  .filter(p => filterBrand === "all" || p.brand === filterBrand)
+  .forEach(p => {
+    const el = document.createElement('div');
+    el.className = 'card';
+    el.innerHTML = `<img src='${p.img}' alt='${p.name}' />
+                    <div class='brand'>${p.brand||''}</div>
+                    <div class='title'>${p.name}</div>
+                    <div class='price'>￥${p.price} <del>￥${p.old}</del></div>`;
+    grid.appendChild(el);
+  });
+}
+
+function initFilter(){
+  const brandFilter = document.getElementById('brandFilter');
+  const brands = [...new Set(products.map(p => p.brand))];
+  brands.forEach(brand => {
+    const opt = document.createElement('option');
+    opt.value = brand;
+    opt.textContent = brand;
+    brandFilter.appendChild(opt);
+  });
+
+  brandFilter.addEventListener('change', () =>{
+    renderProducts(brandFilter.value)
+  });
+}
+
+initFilter();
+renderProducts();
