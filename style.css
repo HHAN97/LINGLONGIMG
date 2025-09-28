@@ -4,7 +4,7 @@ body {
   background: #f7f7f7;
 }
 header {
-  background: #222;
+  background: #000000;
   color: white;
   padding: 16px;
   text-align: center;
@@ -14,9 +14,29 @@ header {
   margin: 0 auto;
   padding: 20px;
 }
+.logo-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.logo {
+  height: auto;
+  width: auto;
+}
 h1 {
   font-size: 28px;
   margin-bottom: 20px;
+}
+.logo-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.logo {
+  height: 40px;
+  width: auto;
 }
 .grid {
   display: grid;
