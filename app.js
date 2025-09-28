@@ -2,7 +2,7 @@ document.getElementById('year').textContent = new Date().getFullYear();
 
     const products = [
       {brand:"ANUA", name:"ANUA Birch Moisture Boosting Toner 250ml ANUA 白桦树保湿爽肤水 250ml", price:22, old:24, img:"LINGLONG/ANUA Birch Moisture Boosting Toner 250ml.webp"},
-      {brand:"ANUA", name:"Anua Niacinamide10% + Txa 4% Dark Spot Removing Serum 30Ml ANUA 烟酰胺10% + TXA 4% 淡斑精华液 30ml", price:29, old:36, img:"LINGLONG/Anua Niacinamide10% + Txa 4% Dark Spot Removing Serum 30M.webp"},
+      {brand:"ANUA", name:"Anua Niacinamide10% + Txa 4% Dark Spot Removing Serum 30Ml ANUA 烟酰胺10% + TXA 4% 淡斑精华液 30ml", price:29, old:36, img:"LINGLONG/Anua Niacinamide10% + Txa 4% Dark Spot Removing Serum 30M.jpg"},
       {brand:"ANUA", name:"Anua Heart leaf Deep Makeup Removal 鱼腥草深层卸妆液", price:23, old:32, img:"LINGLONG/Anua Heart leaf Deep Makeup Removal.webp"},
       {brand:"ANUA", name:"ANUA Rice Bran Toner 250ml 大米爽肤水", price:25, old:26, img:"LINGLONG/ANUA Rice Bran Toner 250ml.webp"},
       {brand:"ARENCIA", name:"ARENCIA Blue Hyssop Cleansing Cream 120g ARENCIA 蓝香薄荷洁面霜 120g", price:23, old:25, img:"LINGLONG/ARENCIA Blue Hyssop.webp"},
