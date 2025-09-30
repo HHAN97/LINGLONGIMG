@@ -14,12 +14,19 @@
   </header>
   <main class="container">
     </div>
-    <div class="filter-bar">
-    <label for="brandFilter">按品牌筛选：</label>
-    <select id="brandFilter">
-      <option value="all">全部</option>
-    </select>
-    </div>
+      <div class="filter-bar">
+        <div class="filter-group">
+          <label for="brandFilter">Filter by Brand：</label>
+          <select id="brandFilter">
+            <option value="all">ALL</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="searchInput">Search：</label>
+          <input type="text" id="searchInput" placeholder="Enter product name..."/>
+        </div>
+      </div>
     <div id="grid" class="grid"></div>
   </main>
   <footer>
