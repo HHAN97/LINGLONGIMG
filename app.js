@@ -74,7 +74,7 @@ function renderProducts(filterBrand = "all", keyword = ""){
     el.innerHTML = `<img src='${p.img}' alt='${p.name}' />
                     <div class='brand'>${p.brand||''}</div>
                     <div class='title'>${p.name}</div>
-                    <div class='price'>￥${p.price} <del>￥${p.old}</del></div>`;
+                    <div class='price'>$${p.price} <del>$${p.old}</del></div>`;
     grid.appendChild(el);
   });
 }
