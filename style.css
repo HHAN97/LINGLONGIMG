@@ -14,7 +14,7 @@ header {
   margin: 0 auto;
   padding: 20px;
 }
-/*
+
 .event-title {
   background: #ffffff;
   color: #000;
@@ -32,7 +32,7 @@ header {
   -webkit-text-fill-color: transparent;
   text-transform: uppercase;
 }
-  */
+
 .logo-title {
   display: flex;
   align-items: center;
@@ -110,8 +110,8 @@ h1 {
 .price {
   margin-top: auto;
   font-size: 20px;
-  color: rgb(0, 0, 0)
-  /*color: rgb(238, 45, 238)*/
+  /*color: rgb(0, 0, 0)*/
+  color: rgb(238, 45, 238)
 }
 .price del {
   color: #999;
